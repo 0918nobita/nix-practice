@@ -13,3 +13,7 @@ nix-repl> import ./test.nix { a = 5; trueMsg = "ok"; }
 trace: ok
 true
 ```
+
+```bash
+nix-build
+```
