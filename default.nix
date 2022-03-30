@@ -1,10 +1,8 @@
 with import <nixpkgs> {};
 
 stdenv.mkDerivation {
-    name = "hello";
+    pname = "hello";
+    version = "0.1.0";
     src = ./hello.c;
-    buildCommand = ''
-        gcc -Wall -Wextra -O2 -o hello $src
-        install -m 555 -D -t $out/bin hello
-    '';
+    builder = ./builder.sh;
 }
